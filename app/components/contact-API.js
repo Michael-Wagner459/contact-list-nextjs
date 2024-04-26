@@ -8,6 +8,7 @@ export const ContactApi = {
       image_url: "https://images.squarespace-cdn.com/content/v1/62ec2bc76a27db7b37a2b32f/625c7248-8056-4505-a1da-a1058c830d92/albert-einstein-with-blue-hair-large.jpg",
       email: 'aeinstein@example.com',
       phone_number: '1555555555'
+
     },
     {
       id:12345678,
