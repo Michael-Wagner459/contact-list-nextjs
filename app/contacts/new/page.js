@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import PropTypes from 'prop-types';
 
 export default function NewContact () {
+
+  //the use state for contact information
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [image_url, setImage_Url] = useState(null);
@@ -19,17 +21,20 @@ export default function NewContact () {
     imageUrl: PropTypes.string.isRequired
   };
 
+  //button function to add contact information and then reroute page back to main contacts page
   const handleSubmitContactClick = () => {
     ContactApi.addContact({
       name,
       email,
       image_url,
       phone_number,
+      //sets id number by default
       id: (Math.round(Math.random() * 100000000)),
     });
     router.push('/contacts');
   }
 
+  //returns input areas for contact information that is inputted. Changes the useState of each parameter on event changes for each input. Has submit button at the bottom
   return (
     <div>
       <div>

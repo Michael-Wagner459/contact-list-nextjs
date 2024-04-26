@@ -1,5 +1,6 @@
 
 export const ContactApi = {
+  //making an array to hold Contacts
   contacts: [
     {
       id: 70219577,
@@ -16,12 +17,15 @@ export const ContactApi = {
       phone_number: '1222222222'
     }
   ],
+  //function to access all contacts
   all: function () {
     return this.contacts
   },
+  //function to add contacts with required information
   addContact: function ({id, name, image_url, email, phone_number}) {
     this.contacts.push({id, name, image_url, email, phone_number});
   },
+  //function to access an individual contact bases upon their assigned id
   get: function (id) {
     const isContact = (contact) => contact.id === id;
     return this.contacts.find(isContact); 
