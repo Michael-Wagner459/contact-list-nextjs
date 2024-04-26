@@ -1,9 +1,13 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-    </main>
-  )
-}
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Contacts from './contacts/page';
+
+const Home = () => (
+  <Router>
+    <Contacts />
+  </Router>
+);
+
+export default Home;
